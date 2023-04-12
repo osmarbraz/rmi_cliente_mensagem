@@ -24,10 +24,10 @@ public class Principal {
         RemoteHello hello = (RemoteHello) obj;
         System.out.println("Mensagem recebida: " + hello.getMensagem());
         hello.setMensagem(JOptionPane.showInputDialog("Digite a mensagen"));
-        } catch(RemoteException ex){
-            System.out.println("Excecao: " + ex.getMessage());
-        } catch (NotBoundException ex) {
-            System.out.println("Excecao: " + ex.getMessage());
+        } catch(RemoteException re){
+            System.out.println("Excecao: " + re.getMessage());
+        } catch (NotBoundException nbe) {
+            System.out.println("Excecao: " + nbe.getMessage());
         }
     }
 }
